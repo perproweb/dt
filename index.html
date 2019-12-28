@@ -67,7 +67,10 @@
 DDT2 is a digital differential temperature controller for solar hot water systems and other applications with one relay output. It covers the most common hydravlic configuration with one heat source (thermal collector) and one heat sink (water tank).
 </p>
 <p>
-The controller measures two temperatures. In mode one; if source (first) temperature rises above the sink (second) temperature the controller will switch relay output on and will switch it off when the sink temperature rises above the set target temperature or the sink temperature approaches source temperature. In mode two; it will switch relay output on only if the sink temperature is below target temperature. When sink temperature rises above the set point the controller will switch relay output off.
+The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source and the temperature of the heat sink. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
+</p>
+<p>
+In mode one; if source temperature rises above the sink temperature the controller will switch relay output on and will switch it off when the sink temperature rises above the set target temperature or the sink temperature approaches source temperature. In mode two; it operates as normal thermostat: switch relay output on only if the temperature is below target (desired) temperature. When temperature rises above the set point the controller will switch relay output off.
 </p>
 
 <h2>Features</h2>
@@ -75,12 +78,12 @@ The controller measures two temperatures. In mode one; if source (first) tempera
 <li>Supports digital sensors (DS18B20) and thermistors (NTC10k)</li>
 <li>Digital display with source and sink temperature</li>
 <li>Adjustable delta T (∆T) differential</li>
-<li>Adjustable target point – storage tank – and minumum starting temperature</li>
+<li>Adjustable target (desired) point – storage tank – and minumum starting temperature</li>
 <li>Nighttime water storage tank cooling</li>
 <li>Adjustable sensor offset</li>
 <li>Running hours counter</li>
 <li>Manual override of output (for system testing)</li>
-<li>Indicator for warning in case of sensor failure</li>
+<li>Indicates warning in case of sensor failure</li>
 <li>Solar panel overheat protection</li>
 <li>Relay delay protection</li>
 <li>Integrated power supply</li>
