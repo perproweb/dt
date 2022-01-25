@@ -6,9 +6,14 @@
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Differential thermostat for solar water heating and other applications</title>
-  <link href="https://fs3.kel.si/_fonts/charter-bt.css" rel="stylesheet" />
   <style>
-    body{background:#eeeeee;font-family:"CharterBT-Roman",serif;font-size:13pt;}
+    @font-face{font-family:"charter";src:url("fonts/charter_bold_italic-webfont.eot");src:url("fonts/charter_bold_italic-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_bold_italic-webfont.woff")format("woff"),url("fonts/charter_bold_italic-webfont.ttf")format("truetype");font-weight:bold;font-style:italic;}
+    @font-face{font-family:"charter";src:url("fonts/charter_bold-webfont.eot");src:url("fonts/charter_bold-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_bold-webfont.woff")format("woff"),url("fonts/charter_bold-webfont.ttf")format("truetype");font-weight:bold;font-style:normal;}
+    @font-face{font-family:"charter";src:url("fonts/charter_italic-webfont.eot");src:url("fonts/charter_italic-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_italic-webfont.woff")format("woff"),url("fonts/charter_italic-webfont.ttf")format("truetype");font-weight:normal;font-style:italic;}
+    @font-face{font-family:"charter";src:url("fonts/charter_regular-webfont.eot");src:url("fonts/charter_regular-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_regular-webfont.woff")format("woff"),url("fonts/charter_regular-webfont.ttf")format("truetype");font-weight:normal;font-style:normal;}
+  </style>
+  <style>
+    body{background:#eeeeee;font-family:charter,serif;font-size:13pt;}
     header,main,footer{max-width:800px;display:block;margin:0 auto;width:98%;}
     footer{padding:2ex 0px;text-align:center;}
     h1{border-bottom:2px solid #452200;}
@@ -64,13 +69,17 @@
 
 <h1>Digital differential thermostat</h1>
 <p>
-DDT2 is a digital differential temperature controller for solar hot water systems and other applications with one relay output. It covers the most common hydravlic configuration with one heat source (thermal collector) and one heat sink (water tank).
+DDT2 is a digital differential temperature controller for solar hot water systems and other applications with one relay output. It covers the most common hydraulic configuration with one heat source (thermal collector) and one heat sink (water tank).
 </p>
 <p>
-The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source and the temperature of the heat sink. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
+The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source, e.g. solar  and the temperature of the heat sink. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
 </p>
 <p>
-In mode one; if source temperature rises above the sink temperature the controller will switch relay output on and will switch it off when the sink temperature rises above the set target temperature or the sink temperature approaches source temperature. In mode two; it operates as normal thermostat: switch relay output on only if the temperature is below target (desired) temperature. When temperature rises above the set point the controller will switch relay output off.
+In mode one; if source temperature rises above the sink temperature the controller will switch relay output on and will switch it off when the sink temperature rises above the set target temperature or the sink temperature approaches source temperature. In mode two and three; it operates as normal thermostat: switch relay output on only if the temperature is below/above target (desired) temperature. When temperature rises above/below the set point the controller will switch relay output off.
+</p>
+
+<p>
+Now also includes 2-sided mode for room air conditioning (automatic ventilation) using outside colder or warmer air. In this mode the controller compares 2 measured values (temperature inside and temperature outside) with 4 pre-set values as follows: when the temperature inside is lower than desired temperature and outside is warmer than inside then the controller switches output relay on to enable transfer of warmer air inside when conected to a fan, and vice-versa.
 </p>
 
 <h2>Features</h2>
@@ -80,8 +89,8 @@ In mode one; if source temperature rises above the sink temperature the controll
 <li>Adjustable delta T (∆T) differential</li>
 <li>Adjustable minumum starting temperature and sufficient temperature to keep it running</li>
 <li>Adjustable target (desired) point – water storage tank – temperature
-<li>Nighttime water storage tank cooling</li>
 <li>Adjustable sensor value offset</li>
+<li>Nighttime water storage tank cooling</li>
 <li>Running hours counter</li>
 <li>Manual override of output (for system testing)</li>
 <li>Indicates warning in case of sensor failure</li>
@@ -115,7 +124,8 @@ All controllers are supplied with a pair of waterproof temperature sensors solde
 <li>Power supply input: <strong>230 V AC</strong></li>
 <li>Output switch: <strong>single pole relay</strong></li>
 <li>Maximal current through relay: <strong>3 A</strong></li>
-<li>Software version: <strong>2005</strong></li>
+<li>Software version: <strong>2201</strong></li>
+<li>PCB revision: 4.5, schematics</li>
 </ul>
 
 <h3>More information</h3>
@@ -125,7 +135,7 @@ All controllers are supplied with a pair of waterproof temperature sensors solde
 <li><a href="https://fs3.kel.si/manuals/solar-differential-thermostat-controller-manual-sl.pdf">Uporabniška navodila za digitalni diferenčni termostat</a> (pdf)</li>
 </ul>
 
-<h2>Usage (hydravlic configurations)</h2>
+<h2>Usage (hydraulic configurations)</h2>
 <p>
 Differential thermostat could be used as a solar controller, as a domestic hot water tank controller or as a fan controller in a greenhouse.
 </p>
@@ -143,7 +153,7 @@ Technical support is available on mail <em>support@[this domain]</em>.
 
 <footer>
 
-<small>2020 KEL, Slovenia</small>
+<small>2022 KEL, Slovenia</small>
 
 </footer>
 
