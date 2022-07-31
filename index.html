@@ -69,23 +69,22 @@
 
 <h1>Digital differential thermostat</h1>
 <p>
-DDT2 is a digital differential temperature controller for solar hot water systems and other applications with one relay output. It covers the most common hydraulic configuration with one heat source (thermal collector) and one heat sink (water tank).
+DDT2 is a digital differential temperature controller for solar hot water systems and other applications, e.g. heating, ventilating and air-conditioning, with one relay output. It covers the most common hydraulic configuration with one heat source (thermal collector) and one heat sink (water tank).
 </p>
 <p>
-The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source, e.g. solar  and the temperature of the heat sink. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
+The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source, e.g. solar, and the temperature of the heat sink. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
 </p>
 <p>
-In mode one; if source temperature rises above the sink temperature the controller will switch relay output on and will switch it off when the sink temperature rises above the set target temperature or the sink temperature approaches source temperature. In mode two and three; it operates as normal thermostat: switch relay output on only if the temperature is below/above target (desired) temperature. When temperature rises above/below the set point the controller will switch relay output off.
+In mode one; if heat source temperature rises above the heat sink temperature the controller will switch relay output on and will switch it off when the sink temperature approaches source temperature or the sink temperature rises above the set target temperature. In mode two and three; it operates as normal thermostat: switch relay output on only if the temperature is below/above target (desired) temperature. When temperature rises above/below the set point the controller will switch relay output off.
 </p>
-
 <p>
-Now also includes 2-sided mode for room air conditioning (automatic ventilation) using outside colder or warmer air. In this mode the controller compares 2 measured values (temperature inside and temperature outside) with 4 pre-set values as follows: when the temperature inside is lower than desired temperature and outside is warmer than inside then the controller switches output relay on to enable transfer of warmer air inside when conected to a fan, and vice-versa.
+Now also includes 2-sided mode for room air conditioning (automatic ventilation) using outside colder or warmer air. In this mode the controller compares 2 measured values (temperature inside and temperature outside) with 4 pre-set values as follows: when the temperature inside is lower than desired temperature and outside is warmer than inside then the controller switches output relay on to enable transfer of warmer air inside when conected to a fan, and vice-versa: when the temperature inside is higher than desired temperature and outside is colder than inside then the controller switches output relay on to enable transfer of colder air inside.
 </p>
 
 <h2>Features</h2>
 <ul>
 <li>Supports digital sensors (DS18B20) and thermistors (NTC10k)</li>
-<li>Digital display with source and sink temperature</li>
+<li>Digital display with heat source and sink temperature</li>
 <li>Adjustable delta T (∆T) differential</li>
 <li>Adjustable minumum starting temperature and sufficient temperature to keep it running</li>
 <li>Adjustable target (desired) point – water storage tank – temperature
@@ -106,7 +105,7 @@ Now also includes 2-sided mode for room air conditioning (automatic ventilation)
 Current EU version of a controller works on 230 V mains and has Celsius readout. Other customizations on request.
 </p>
 <p>
-All controllers are supplied with a pair of waterproof temperature sensors soldered to 2&nbsp;m long leads. These are DS18B20, NTC10k or a combination.
+All controllers are by default supplied with a pair of waterproof temperature sensors soldered to 2&nbsp;m long leads. These are DS18B20, NTC10k or a combination. Each sensor is embedded in epoxy inside stainless steel tubes with outside diameter of 6&nbsp;mm. Leads length could be customized.
 </p>
 
 <h3>Pictures</h3>
@@ -118,13 +117,13 @@ All controllers are supplied with a pair of waterproof temperature sensors solde
 <ul>
 <li>Switching difference: <strong>0.5 — 20.0 °C</strong>, step <strong>0.5 °C</strong></li>
 <li>Hysteresis: <strong>1.0 — 19.0 °C</strong>, step <strong>0.5 °C</strong></li>
-<li>Measuring range: <strong>−28.0 — 99.5 °C</strong></li>
+<li>Display range: <strong>−28.0 — 99.5 °C</strong></li>
 <li>Controller operating environment: <strong>5 — 40 °C</strong></li>
 <li>Accuracy: <strong>0.5 °C</strong></li>
 <li>Power supply input: <strong>230 V AC</strong></li>
 <li>Output switch: <strong>single pole relay</strong></li>
 <li>Maximal current through relay: <strong>3 A</strong></li>
-<li>Software version: <strong>2201</strong></li>
+<li>Software version: <strong>2204</strong></li>
 <li>PCB revision: 4.5, schematics</li>
 </ul>
 
