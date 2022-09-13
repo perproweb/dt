@@ -20,12 +20,13 @@
     a{color:#452200;}
     p{text-align:justify;}
     ul{list-style-type:square;}
-    .configurations{margin:0 -2.5em;}
-    .configurations img{margin:0 2.5em;max-width:100%;}
-    .images img{max-width:100%;}
+    ul li+li{margin-top:0.25em;}
+    .configurations{overflow:hidden;}
+    .configurations div{float:left;margin:0 2.5em;}
+    img{max-width:100%;}
     @media(max-width:960px){
-      ul{list-style-type:none;padding-left:0;}
-      ul li+li{margin-top:0.5em;}
+      ul{padding-left:1em;}
+      ul li+li{margin-top:0;}
     }
   </style> 
 </head>
@@ -67,16 +68,16 @@
 
 <h1>Digital differential thermostat</h1>
 <p>
-DDT2 is a digital differential temperature controller for solar hot water systems and other applications, e.g. heating, ventilating and air-conditioning, with one relay output. It covers the most common hydraulic configuration with one heat source (thermal collector) and one heat sink (water tank).
+DDT2 is a digital differential temperature controller for solar hot water systems, boiler systems with indirect hot water cylinders, and other applications, e.g. heating, ventilating and air-conditioning, with one relay output. It covers the most common hydraulic configuration with one heat source (thermal collector or boiler) and one heat sink (water tank).
 </p>
 <p>
-The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source, e.g. solar, and the temperature of the heat sink. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
+The meaning of differential thermostat comes from a temperature difference between two measured temperatures: the temperature of the heat source, e.g. solar, and the temperature of the heat sink, e.g. water tank. On these observations and pre-set values the controller makes a decision: output relay on or off — transfer heat or not.
 </p>
 <p>
 In mode one; if heat source temperature rises above the heat sink temperature the controller will switch relay output on and will switch it off when the sink temperature approaches source temperature or the sink temperature rises above the set target temperature. In mode two and three; it operates as normal thermostat: switch relay output on only if the temperature is below/above target (desired) temperature. When temperature rises above/below the set point the controller will switch relay output off.
 </p>
 <p>
-Now also includes 2-sided mode for room air conditioning (automatic ventilation) using outside colder or warmer air. In this mode the controller compares 2 measured values (temperature inside and temperature outside) with 4 pre-set values as follows: when the temperature inside is lower than desired temperature and outside is warmer than inside then the controller switches output relay on to enable transfer of warmer air inside when conected to a fan, and vice-versa: when the temperature inside is higher than desired temperature and outside is colder than inside then the controller switches output relay on to enable transfer of colder air inside.
+Now also includes 2-sided mode for room air conditioning (automatic ventilation) using outside colder or warmer air. In this mode the controller compares 2 measured values (temperature inside and temperature outside) with 4 pre-set values (desired temperatures) as follows: when the temperature inside is lower than desired temperature and outside is warmer than inside then the controller switches output relay on to enable transfer of warmer air inside when conected to a fan, and vice-versa: when the temperature inside is higher than desired temperature and outside is colder than inside then the controller switches output relay on to enable transfer of colder air inside.
 </p>
 
 <h2>Features</h2>
@@ -103,7 +104,7 @@ Now also includes 2-sided mode for room air conditioning (automatic ventilation)
 Current EU version of a controller works on 230 V mains and has Celsius readout. Other customizations on request.
 </p>
 <p>
-All controllers are by default supplied with a pair of waterproof temperature sensors soldered to 2&nbsp;m long leads. These are DS18B20, NTC10k or a combination. Each sensor is embedded in epoxy inside stainless steel tubes with outside diameter of 6&nbsp;mm. Leads length could be customized.
+All controllers are by default supplied with a pair of waterproof temperature sensors soldered to 2&nbsp;m long leads. These are DS18B20, NTC10k or a combination. Each sensor is embedded in epoxy inside stainless steel tube with outside diameter of 6&nbsp;mm. Leads length could be customized.
 </p>
 
 <h3>Pictures</h3>
@@ -137,8 +138,12 @@ All controllers are by default supplied with a pair of waterproof temperature se
 Differential thermostat could be used as a solar controller, as a domestic hot water tank controller or as a fan controller in a greenhouse.
 </p>
 <div class="configurations">
-<img src="images/ddt2_solar_hydravlic_configuration.png" alt="Hydravlic configuration for solar water heating" /> 
+<div>
+<img src="images/ddt2_solar_hydravlic_configuration.png" alt="Hydravlic configuration for solar water heating" />
+</div>
+<div>
 <img src="images/ddt2_furnace_hydravlic_configuration.png" alt="Alternative hydravlic configuration" />
+</div>
 </div>
 
 <h2>Support</h2>
