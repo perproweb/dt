@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Instructions how to make your own differential thermostat based on AVR microprocessor and two digital integrated circuits">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://differential-thermostat.com/diy.html">
+  <title>Make your own differential thermostat for solar water heating and other applications</title>
+  <style>
+    @font-face{font-family:"charter";src:url("fonts/charter_bold_italic-webfont.eot");src:url("fonts/charter_bold_italic-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_bold_italic-webfont.woff")format("woff"),url("fonts/charter_bold_italic-webfont.ttf")format("truetype");font-display:fallback;font-weight:bold;font-style:italic;}
+    @font-face{font-family:"charter";src:url("fonts/charter_bold-webfont.eot");src:url("fonts/charter_bold-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_bold-webfont.woff")format("woff"),url("fonts/charter_bold-webfont.ttf")format("truetype");font-display:fallback;font-weight:bold;font-style:normal;}
+    @font-face{font-family:"charter";src:url("fonts/charter_italic-webfont.eot");src:url("fonts/charter_italic-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_italic-webfont.woff")format("woff"),url("fonts/charter_italic-webfont.ttf")format("truetype");font-display:fallback;font-weight:normal;font-style:italic;}
+    @font-face{font-family:"charter";src:url("fonts/charter_regular-webfont.eot");src:url("fonts/charter_regular-webfont.eot?#iefix")format("embedded-opentype"),url("fonts/charter_regular-webfont.woff")format("woff"),url("fonts/charter_regular-webfont.ttf")format("truetype");font-display:fallback;font-weight:normal;font-style:normal;}
+  </style>
+  <style>
+    body{background:#eeeeee;font-family:"charter",serif;font-size:13pt;}
+    header,main,footer{display:block;margin:0 auto;max-width:800px;width:98%;}
+    footer{font-size:80%;padding:2ex 0px;text-align:center;}
+    h1{border-bottom:2px solid #452200;}
+    a{color:#452200;}
+    p{text-align:justify;}
+    ul{list-style-type:square;}
+    ul li+li{margin-top:0.25em;}
+    img{display:block;border:2px solid #452200;height:100%;margin:4px auto;max-width:100%;clear:both;}
+    @media(max-width:960px){
+      ul{padding-left:1em;}
+      ul li+li{margin-top:0;}
+    }
+  </style> 
+</head>
+<body>
+
+<main>
+
+<h1>DIY DDT2</h1>
+<p>
+  DDT2 is based around Atmega328PB and DS18B20+ integrated circuits. All functions are implemented in software and therefor not many passive elements are required. It needs 5V DC to operate.
+<p>
+
+<h2>BOM</h2>
+<ul>
+  <li>Atmega328PB — U1</li>
+  <li>DS18B20+</li>
+  <li>LCD1602, HD44780 compatible LCD — DS1</li>
+  <li>100n capacitor — C1, C2, C3, C4, C5, C6, C7 (mostly as decoupling capacitor)</li>
+  <li>4,7 µF capacitor — C11</li>
+  <li>47 µF capacitor — C16</li>
+  <li>10 µH inductor — L1, L2 (can be omitted)</li>
+  <li>BC857 PNP — Q1</li>
+  <li>4,7 kΩ resistor — R1, R2, R3, R4</li>
+  <li>10 kΩ resistor — R5, R6</li>
+  <li>470 Ω resistor — R7 (LCD background current limiting)</li>
+  <li>100 kΩ resistor — R13</li>
+  <li>10 kΩ trim potentiometer — RV1 (LCD contrast)</li>
+  <li>tactile switch — SW1, SW2</li>
+</ul> 
+<p>
+  Relay is connected over SCK (B5). Logical zero means relay ON, so another PNP transistor and pull-up resistor are needed. Do not forget flyback diode for relay coil.
+</p>
+<p>
+  First DS18B20+ is connected to VCC, its data pin to SDA (C4) and its ground pin to MOSI (B3). Second DS18B20+ is connected to VCC, its data pin to SCL (C5) and its ground pin to MISO (B4).
+</p>
+
+<h2>Schematics</h2>
+<img src="resources/g756.png" alt="microprocessor" />
+<img src="resources/g808.png" alt="buttons" />
+<img src="resources/g1266.png" alt="lcd" />
+
+<h2>Software</h2>
+<ul>
+  <li>FLASH image: <a href="https://differential-thermostat.s3.amazonaws.com/current/diyddt2.hex">diyddt2.hex</a></li>
+  <li>EEPROM image: <a href="https://differential-thermostat.s3.amazonaws.com/current/diyddt2.epp">diyddt2.epp</a></li>
+</ul>
+<p>
+  If you're using USBASP programmer, flash with:
+</p>
+<pre>
+  avrdude -c usbasp -p m328pb -B 5 -U flash:w:diyddt2.hex -U eeprom:w:diyddt2.epp
+</pre>
+<p>
+  No (additional) fuse bits needed.
+</p>
+
+<h2>Troubleshooting</h2>
+<p>
+  Questions? Drop mail to <em>diy@[this domain]</em>.
+</p>
+
+</main>
+
+<footer>
+2025 KEL, Slovenia
+</footer>
+
+</body>
+</html>
