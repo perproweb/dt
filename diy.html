@@ -37,19 +37,19 @@
 
 <h1>DIY DDT2</h1>
 <p>
-  DDT2 is based on Atmega328PB and DS18B20+ integrated circuits. All functions are implemented in software, therefore not many passive elements are required. It needs 5V DC to operate.
+  DDT2 is based on Atmega328PB and DS18B20+ integrated circuits. All functions are implemented in software, therefore not many passive elements are required. It needs only 5V DC to operate.
 <p>
 
 <h2>BOM</h2>
 <ul>
   <li>Atmega328PB — U1</li>
-  <li>DS18B20+</li>
+  <li>DS18B20+ (as temperature probe)</li>
   <li>HD44780 compatible 16x2 LCD — DS1</li>
   <li>100n capacitor — C1, C2, C3, C4, C5, C6, C7 (mostly as decoupling capacitor)</li>
   <li>4,7 µF capacitor — C11</li>
   <li>47 µF capacitor — C16</li>
   <li>10 µH inductor — L1, L2 (can be omitted)</li>
-  <li>BC857 PNP — Q1</li>
+  <li>BC857 PNP — Q1 (LED background switch)</li>
   <li>4,7 kΩ resistor — R1, R2, R3, R4</li>
   <li>10 kΩ resistor — R5, R6</li>
   <li>470 Ω resistor — R7 (LCD's background LED current limiting)</li>
@@ -65,9 +65,9 @@
 </p>
 
 <h2>Schematics</h2>
-<img src="resources/g662.png" alt="microprocessor">
-<img src="resources/g808.png" alt="buttons">
-<img src="resources/g1266.png" alt="lcd">
+<img src="resources/g662.png" alt="differential thermostat microprocessor circuit">
+<img src="resources/g808.png" alt="buttons and reset circuit">
+<img src="resources/g1266.png" alt="lcd circuit">
 
 <h2>Software</h2>
 <ul>
