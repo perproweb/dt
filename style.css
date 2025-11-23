@@ -1,3 +1,23 @@
 @font-face{font-display:swap;font-family:"Work Sans";font-style:normal;font-weight:400;src:url("fonts/work-sans-v23-latin-regular.woff2") format("woff2"),url("fonts/work-sans-v23-latin-regular.ttf") format("truetype");}
 @font-face{font-display: swap;font-family:"Work Sans";font-style:italic;font-weight:400;src:url("fonts/work-sans-v23-latin-italic.woff2") format("woff2"),url("fonts/work-sans-v23-latin-italic.ttf") format("truetype");}
 @font-face{font-display:swap;font-family:"Work Sans";font-style:normal;font-weight:500;src:url("fonts/work-sans-v23-latin-500.woff2") format("woff2"),url("fonts/work-sans-v23-latin-500.ttf") format("truetype");}
+body{background:#eeeeee;font-family:"Work Sans",sans-serif;font-size:13pt;margin:0;}
+header,main,footer{display:block;margin:0 auto;max-width:800px;}
+footer{font-size:80%;padding:2ex 0px;text-align:center;}
+h1,h2,h3,strong{font-weight:500;}
+h1{border-bottom:2px solid #452200;}
+a{color:#452200;}
+p{text-align:justify;}
+ul{list-style-type:square;}
+ul li{margin-top:0.25em;}
+img{height:auto;max-width:100%;}
+@media(max-width:960px){
+  body{font-size:11pt;margin:1em;}
+  ul{padding-left:1em;}
+  ul li{margin-top:0;}
+}
+.configurations{overflow:hidden;}
+.configurations div{float:left;margin:1em 2.5em;}
+pre{border-left:1em solid white;border-right:1em solid white;overflow-x:auto;padding:1em 0;}
+pre,p code{background:white;border-radius:6px;}
+.diagrams img{display:block;border:2px solid #452200;margin:4px auto;clear:both;}
